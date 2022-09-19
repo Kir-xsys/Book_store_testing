@@ -146,7 +146,7 @@
 # driver.quit()
 
 
-# #-----Shop: работа в корзине------done-----
+# #-----Shop: работа в корзине------done----
 
 # from selenium import webdriver
 # driver = webdriver.Chrome()
