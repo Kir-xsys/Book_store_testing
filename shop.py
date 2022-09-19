@@ -118,7 +118,7 @@
 
 
 # #----Shop: проверка цены в корзине ---done-------
-
+# import time
 # from selenium import webdriver
 # driver = webdriver.Chrome()
 # driver.maximize_window()
@@ -147,6 +147,47 @@
 
 
 # #-----Shop: работа в корзине------done----
+# import time
+# from selenium import webdriver
+# driver = webdriver.Chrome()
+# driver.maximize_window()
+# driver.implicitly_wait(5)
+# driver.get("https://practice.automationtesting.in/")
+# shop_btn = driver.find_element_by_css_selector("#menu-item-40 a")
+# shop_btn.click()
+# time.sleep(1)
+# driver.execute_script("window.scrollBy(0, 300);")
+# add_bascket = driver.find_element_by_css_selector("[href='/shop/?add-to-cart=182']")
+# add_bascket.click()
+# time.sleep(2)
+# add_bascket_2 = driver.find_element_by_css_selector("[href='/shop/?add-to-cart=180']")
+# add_bascket_2.click()
+# time.sleep(2)
+# bascket_btn = driver.find_element_by_css_selector(".added_to_cart.wc-forward")
+# bascket_btn.click()
+# time.sleep(2)
+# remove_1 = driver.find_element_by_css_selector("[data-product_id='182']")
+# remove_1.click()
+# undo_remove = driver.find_element_by_css_selector(".woocommerce-message a")
+# undo_remove.click()
+# change_num = driver.find_element_by_css_selector("tbody tr:nth-child(1) >td:nth-child(5) .text")
+# change_num.clear()
+# change_num.send_keys("3")
+# update_cart = driver.find_element_by_css_selector(".actions [name='update_cart']")
+# update_cart.click()
+# value_num = change_num.get_attribute("value")
+# assert value_num == "3"
+# time.sleep(2)
+# apply_btn = driver.find_element_by_css_selector(".actions [name='apply_coupon']")
+# apply_btn.click()
+# update_text = driver.find_element_by_css_selector(".woocommerce-error li")
+# update_text_check = update_text.text
+# assert update_text_check == "Please enter a coupon code."
+# driver.quit()
+
+
+
+# #---------Shop: покупка товара -----done ----
 
 # from selenium import webdriver
 # driver = webdriver.Chrome()
